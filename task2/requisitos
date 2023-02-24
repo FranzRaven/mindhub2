@@ -1,0 +1,10 @@
+🔸Reemplazar las cards con información estática por cards con información dinámicas utilizando  los datos del archivo que nos mando el cliente
+
+🔸Recorrer array eventos y obtener la fecha base de referencia y la fecha del evento para ver si es past o upcoming event. (evento pasado | evento futuro)
+
+🔸En el home.html deben haber tantas tarjetas como eventos haya en el array de eventos.
+
+🔸Podrán observar que PAST y UPCOMMING tienen 7 eventos cada uno, imprimir los templates en el html.
+
+🔸Te recomendamos que cada pagina .html tenga su archivo . js en una carpeta llamada scripts.
+
