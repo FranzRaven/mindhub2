@@ -8,8 +8,14 @@ function readarray(array,i, X){
 
 let cards = document.getElementsByClassName("ordo-cards");
 let fragment = document.createDocumentFragment();
+let fecha = data.currentDate;
+let phecha = Date.parse(fecha);
+
 
 for(let i=0; i<dat.length; i++){
+  let phecha2 = Date.parse(dat[i].date);
+  if(phecha2 > phecha){
+
   let div = document.createElement('div')
   div.classList.add("card","fotis");
 
@@ -30,8 +36,9 @@ for(let i=0; i<dat.length; i++){
 
 
   let butt  = document.createElement("button");
-  butt.id = readarray(dat, [i], "_id")
-  butt.onclick = clickd
+    butt.id = readarray(dat, [i], "_id")
+    butt.onclick = clickd;
+
   butt.innerText = "Ver más";
 
   div.appendChild(divfot)
@@ -40,24 +47,16 @@ for(let i=0; i<dat.length; i++){
   div.appendChild(butt)
   fragment.appendChild(div)
 }
+}
 cards[0].appendChild(fragment)
 
 
 
+
 function clickd(x){
-window.location.href='../details.html'
+  window.location.href='../details.html'
   let ID = x.target.id;   
-  console.log(ID);
+   console.log(ID);
   console.log(x)
-  let result = dat.find(item => item._id == ID );
-  
-
-  console.log(result.image);  
-  var parrafo = document.getElementById('side');
-  //parrafo.textContent = "asdgasdg asdgas"
-
-}
-
-
-
+  }
 
